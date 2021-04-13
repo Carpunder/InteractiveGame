@@ -35,3 +35,15 @@ F:/Game/Game/obj/Debug/netcoreapp3.1/Game.genruntimeconfig.cache
 /Volumes/FLASHKA/Game/Game/obj/Debug/netcoreapp3.1/Game.dll
 /Volumes/FLASHKA/Game/Game/obj/Debug/netcoreapp3.1/Game.pdb
 /Volumes/FLASHKA/Game/Game/obj/Debug/netcoreapp3.1/Game.genruntimeconfig.cache
+/Users/pavelprokopenko/RiderProjects/InteractiveGame/Game/bin/Debug/netcoreapp3.1/Game.deps.json
+/Users/pavelprokopenko/RiderProjects/InteractiveGame/Game/bin/Debug/netcoreapp3.1/Game.runtimeconfig.json
+/Users/pavelprokopenko/RiderProjects/InteractiveGame/Game/bin/Debug/netcoreapp3.1/Game.runtimeconfig.dev.json
+/Users/pavelprokopenko/RiderProjects/InteractiveGame/Game/bin/Debug/netcoreapp3.1/Game.dll
+/Users/pavelprokopenko/RiderProjects/InteractiveGame/Game/bin/Debug/netcoreapp3.1/Game.pdb
+/Users/pavelprokopenko/RiderProjects/InteractiveGame/Game/obj/Debug/netcoreapp3.1/Game.csprojAssemblyReference.cache
+/Users/pavelprokopenko/RiderProjects/InteractiveGame/Game/obj/Debug/netcoreapp3.1/Game.AssemblyInfoInputs.cache
+/Users/pavelprokopenko/RiderProjects/InteractiveGame/Game/obj/Debug/netcoreapp3.1/Game.AssemblyInfo.cs
+/Users/pavelprokopenko/RiderProjects/InteractiveGame/Game/obj/Debug/netcoreapp3.1/Game.csproj.CoreCompileInputs.cache
+/Users/pavelprokopenko/RiderProjects/InteractiveGame/Game/obj/Debug/netcoreapp3.1/Game.dll
+/Users/pavelprokopenko/RiderProjects/InteractiveGame/Game/obj/Debug/netcoreapp3.1/Game.pdb
+/Users/pavelprokopenko/RiderProjects/InteractiveGame/Game/obj/Debug/netcoreapp3.1/Game.genruntimeconfig.cache

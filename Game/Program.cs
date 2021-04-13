@@ -18,12 +18,6 @@ namespace Game
                 "Ghrisha", true, true,
                 Race.Elf, Sex.Male, 19, 2000, 500,5000);
             
-            var revive = new Revive();
-            
-            revive.Cast(person, personCharacter);
-            person.OnCharacterEvent();
-            personCharacter.OnCharacterEvent();
-            Console.WriteLine(personCharacter.State);
             
         }
     }
