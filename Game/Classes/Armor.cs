@@ -8,52 +8,52 @@ namespace Game.Classes
     {
         public Armor() : base(50, false,false){}
 
-        public override void Cast(MagicCharacter magicCharacter, uint time)
+        public override void Cast(MagicCharacter caster, uint time)
         {
-            if (magicCharacter.CurrentMP >= ManaCost * time)
+            if (caster.CurrentMP >= ManaCost * time)
             {
-                magicCharacter.CurrentMP -= ManaCost * time;
+                caster.CurrentMP -= ManaCost * time;
                 Thread.Sleep((int) (time*1000));
-                magicCharacter.CharacterEvent += delegate { Console.WriteLine("Armor spell is Cast\n" +
+                caster.CharacterEvent += delegate { Console.WriteLine("Armor spell is Cast\n" +
                                                                               $"Time: {time} sec.\n" +
-                                                                              $"Current MP: {magicCharacter.CurrentMP}"); };
+                                                                              $"Current MP: {caster.CurrentMP}"); };
             }
             else
-                magicCharacter.CharacterEvent += delegate { Console.WriteLine("Not Enough mana " +
+                caster.CharacterEvent += delegate { Console.WriteLine("Not Enough mana " +
                                                                               "to cast Armor Spell"); };
         }
 
-        public override void Cast(MagicCharacter magicCharacter, Character character, uint time)
+        public override void Cast(MagicCharacter caster, Character target, uint time)
         {
-            if (magicCharacter.CurrentMP >= ManaCost * time)
+            if (caster.CurrentMP >= ManaCost * time)
             {
-                magicCharacter.CurrentMP -= ManaCost * time;
+                caster.CurrentMP -= ManaCost * time;
                 Thread.Sleep((int) (time*1000));
-                magicCharacter.CharacterEvent += delegate { Console.WriteLine("Armor spell is Cast\n" +
+                caster.CharacterEvent += delegate { Console.WriteLine("Armor spell is Cast\n" +
                                                                               $"Time: {time} sec.\n" +
-                                                                              $"Current MP: {magicCharacter.CurrentMP}"); };
-                character.CharacterEvent += delegate { Console.WriteLine("Armor spell is Cast\n" +
+                                                                              $"Current MP: {caster.CurrentMP}"); };
+                target.CharacterEvent += delegate { Console.WriteLine("Armor spell is Cast\n" +
                                                                          $"Time: {time} sec.\n" ); };
             }
             else
-                magicCharacter.CharacterEvent += delegate { Console.WriteLine("Not Enough mana " +
+                caster.CharacterEvent += delegate { Console.WriteLine("Not Enough mana " +
                                                                               "to cast Armor Spell"); };
         }
 
-        public override void Cast(MagicCharacter magicCharacter, MagicCharacter character, uint time)
+        public override void Cast(MagicCharacter caster, MagicCharacter target, uint time)
         {
-            if (magicCharacter.CurrentMP >= ManaCost * time)
+            if (caster.CurrentMP >= ManaCost * time)
             {
-                magicCharacter.CurrentMP -= ManaCost * time;
+                caster.CurrentMP -= ManaCost * time;
                 Thread.Sleep((int) (time*1000));
-                magicCharacter.CharacterEvent += delegate { Console.WriteLine("Armor spell is Cast\n" +
+                caster.CharacterEvent += delegate { Console.WriteLine("Armor spell is Cast\n" +
                                                                               $"Time: {time} sec.\n" +
-                                                                              $"Current MP: {magicCharacter.CurrentMP}"); };
-                character.CharacterEvent += delegate { Console.WriteLine("Armor spell is Cast\n" +
+                                                                              $"Current MP: {caster.CurrentMP}"); };
+                target.CharacterEvent += delegate { Console.WriteLine("Armor spell is Cast\n" +
                                                                          $"Time: {time} sec.\n" ); };
             }
             else
-                magicCharacter.CharacterEvent += delegate { Console.WriteLine("Not Enough mana " +
+                caster.CharacterEvent += delegate { Console.WriteLine("Not Enough mana " +
                                                                               "to cast Armor Spell"); };
         }
     }

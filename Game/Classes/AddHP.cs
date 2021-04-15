@@ -6,68 +6,68 @@ namespace Game.Classes
     {
         public AddHP() : base(0, true, false){}
         
-        public override void Cast(MagicCharacter magicCharacter, uint mana)
+        public override void Cast(MagicCharacter caster, uint mana)
         {
-            if (magicCharacter.CurrentMP >= mana && magicCharacter.CurrentTalkAbillity)
+            if (caster.CurrentMP >= mana && caster.CurrentTalkAbillity)
             {
                 for (uint i = 1; i <= mana; i += 2)
                 {
-                    if(magicCharacter.CurrentHP >= magicCharacter.MaxHP)
+                    if(caster.CurrentHP >= caster.MaxHP)
                         break;
-                    magicCharacter.CurrentHP += 1;
-                    magicCharacter.CurrentMP -= 2;
+                    caster.CurrentHP += 1;
+                    caster.CurrentMP -= 2;
                 }
-                magicCharacter.CharacterEvent += delegate { Console.WriteLine("AddHP spell is Cast\n" +
-                                                                              $"Current HP:{magicCharacter.CurrentHP}\n" +
-                                                                              $"Current MP: {magicCharacter.CurrentMP}"); };
+                caster.CharacterEvent += delegate { Console.WriteLine("AddHP spell is Cast\n" +
+                                                                              $"Current HP:{caster.CurrentHP}\n" +
+                                                                              $"Current MP: {caster.CurrentMP}"); };
             }
             else
-                magicCharacter.CharacterEvent += delegate { Console.WriteLine("Not Enough mana or no speak abillity " +
+                caster.CharacterEvent += delegate { Console.WriteLine("Not Enough mana or no speak abillity " +
                                                                               "to cast AddHP Spell"); };
         }
 
-        public override void Cast(MagicCharacter magicCharacter, Character character, uint mana)
+        public override void Cast(MagicCharacter caster, Character target, uint mana)
         {
-            if (magicCharacter.CurrentMP >= mana && magicCharacter.CurrentTalkAbillity)
+            if (caster.CurrentMP >= mana && caster.CurrentTalkAbillity)
             {
                 for (uint i = 1; i <= mana; i += 2)
                 {
-                    if(character.CurrentHP >= character.MaxHP)
+                    if(target.CurrentHP >= target.MaxHP)
                         break;
-                    character.CurrentHP += 1;
-                    magicCharacter.CurrentMP -= 2;
+                    target.CurrentHP += 1;
+                    caster.CurrentMP -= 2;
                 }
-                magicCharacter.CharacterEvent += delegate { Console.WriteLine("AddHP spell is Cast\n" +
-                                                                              $"Current MP: {magicCharacter.CurrentMP}"); };
-                character.CharacterEvent += delegate { Console.WriteLine("AddHP spell is Cast\n" +
-                                                                         $"Current HP: {character.CurrentHP}"); };
+                caster.CharacterEvent += delegate { Console.WriteLine("AddHP spell is Cast\n" +
+                                                                      $"Current MP: {caster.CurrentMP}"); };
+                target.CharacterEvent += delegate { Console.WriteLine("AddHP spell is Cast\n" +
+                                                                         $"Current HP: {target.CurrentHP}"); };
             }
             else
             {
-                magicCharacter.CharacterEvent += delegate { Console.WriteLine("Not Enough mana or no speak abillity " +
+                caster.CharacterEvent += delegate { Console.WriteLine("Not Enough mana or no speak abillity " +
                                                                               "to cast AddHP Spell"); };
             }
         }
         
-        public override void Cast(MagicCharacter magicCharacter, MagicCharacter character, uint mana)
+        public override void Cast(MagicCharacter caster, MagicCharacter target, uint mana)
         {
-            if (magicCharacter.CurrentMP >= mana && magicCharacter.CurrentTalkAbillity)
+            if (caster.CurrentMP >= mana && caster.CurrentTalkAbillity)
             {
                 for (uint i = 1; i <= mana; i += 2)
                 {
-                    if(character.CurrentHP >= character.MaxHP)
+                    if(target.CurrentHP >= target.MaxHP)
                         break;
-                    character.CurrentHP += 1;
-                    magicCharacter.CurrentMP -= 2;
+                    target.CurrentHP += 1;
+                    caster.CurrentMP -= 2;
                 }
-                magicCharacter.CharacterEvent += delegate { Console.WriteLine("AddHP spell is Cast\n" +
-                                                                              $"Current MP: {magicCharacter.CurrentMP}"); };
-                character.CharacterEvent += delegate { Console.WriteLine("AddHP spell is Cast\n" +
-                                                                         $"Current HP: {character.CurrentHP}"); };
+                caster.CharacterEvent += delegate { Console.WriteLine("AddHP spell is Cast\n" +
+                                                                              $"Current MP: {caster.CurrentMP}"); };
+                target.CharacterEvent += delegate { Console.WriteLine("AddHP spell is Cast\n" +
+                                                                         $"Current HP: {target.CurrentHP}"); };
             }
             else
             {
-                magicCharacter.CharacterEvent += delegate { Console.WriteLine("Not Enough mana or no speak abillity " +
+                caster.CharacterEvent += delegate { Console.WriteLine("Not Enough mana or no speak abillity " +
                                                                               "to cast AddHP Spell"); };
             }
         }

@@ -7,55 +7,55 @@ namespace Game.Classes
     {
         public Heal() : base(20, false, false){}
 
-       public override void Cast(MagicCharacter magicCharacter)
+       public override void Cast(MagicCharacter caster)
         {
-            if (magicCharacter.CurrentMP >= ManaCost)
+            if (caster.CurrentMP >= ManaCost)
             { 
-                if (magicCharacter.State == State.Seek)
+                if (caster.State == State.Seek)
                 {
-                    magicCharacter.CurrentMP -= ManaCost;
-                    magicCharacter.State = Methods.RandomState(State.Normal, State.Weakened);
-                    magicCharacter.CharacterEvent += delegate { Console.WriteLine("Heal spell is Cast"); };
+                    caster.CurrentMP -= ManaCost;
+                    caster.State = Methods.RandomState(State.Normal, State.Weakened);
+                    caster.CharacterEvent += delegate { Console.WriteLine("Heal spell is Cast"); };
                 }
                 else
-                    magicCharacter.CharacterEvent += delegate { Console.WriteLine("Character isn't seek"); };
+                    caster.CharacterEvent += delegate { Console.WriteLine("Character isn't seek"); };
             }
             else
-                magicCharacter.CharacterEvent += delegate { Console.WriteLine("Not Enough mana to cast HealSpell"); };
+                caster.CharacterEvent += delegate { Console.WriteLine("Not Enough mana to cast HealSpell"); };
         }
-        public override void Cast(MagicCharacter magicCharacter, Character character)
+        public override void Cast(MagicCharacter caster, Character target)
         {
-            if (magicCharacter.CurrentMP >= ManaCost)
+            if (caster.CurrentMP >= ManaCost)
             {
-                if (character.State == State.Seek)
+                if (target.State == State.Seek)
                 {
-                    magicCharacter.CurrentMP -= ManaCost;
-                    character.State = Methods.RandomState(State.Normal, State.Weakened);
-                    magicCharacter.CharacterEvent += delegate { Console.WriteLine("Heal spell is Cast"); };
-                    character.CharacterEvent += delegate { Console.WriteLine("Heal spell is Cast"); };
+                    caster.CurrentMP -= ManaCost;
+                    target.State = Methods.RandomState(State.Normal, State.Weakened);
+                    caster.CharacterEvent += delegate { Console.WriteLine("Heal spell is Cast"); };
+                    target.CharacterEvent += delegate { Console.WriteLine("Heal spell is Cast"); };
                 }
                 else
-                    magicCharacter.CharacterEvent += delegate { Console.WriteLine("Character isn't seek"); };
+                    caster.CharacterEvent += delegate { Console.WriteLine("Character isn't seek"); };
             }
             else
-                magicCharacter.CharacterEvent += delegate { Console.WriteLine("Not Enough mana to cast HealSpell"); };
+                caster.CharacterEvent += delegate { Console.WriteLine("Not Enough mana to cast HealSpell"); };
         }
-        public override void Cast(MagicCharacter magicCharacter, MagicCharacter character)
+        public override void Cast(MagicCharacter caster, MagicCharacter target)
         {
-            if (magicCharacter.CurrentMP >= ManaCost)
+            if (caster.CurrentMP >= ManaCost)
             {
-                if (character.State == State.Seek)
+                if (target.State == State.Seek)
                 {
-                    magicCharacter.CurrentMP -= ManaCost;
-                    character.State = Methods.RandomState(State.Normal, State.Weakened);
-                    magicCharacter.CharacterEvent += delegate { Console.WriteLine("Heal spell is Cast"); };
-                    character.CharacterEvent += delegate { Console.WriteLine("Heal spell is Cast"); };
+                    caster.CurrentMP -= ManaCost;
+                    target.State = Methods.RandomState(State.Normal, State.Weakened);
+                    caster.CharacterEvent += delegate { Console.WriteLine("Heal spell is Cast"); };
+                    target.CharacterEvent += delegate { Console.WriteLine("Heal spell is Cast"); };
                 }
                 else
-                    magicCharacter.CharacterEvent += delegate { Console.WriteLine("Character isn't seek"); };
+                    caster.CharacterEvent += delegate { Console.WriteLine("Character isn't seek"); };
             }
             else
-                magicCharacter.CharacterEvent += delegate { Console.WriteLine("Not Enough mana to cast HealSpell"); };
+                caster.CharacterEvent += delegate { Console.WriteLine("Not Enough mana to cast HealSpell"); };
         }
     }
 }
