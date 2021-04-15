@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Game.Classes;
 using Game.Enums;
 
@@ -17,7 +18,6 @@ namespace Game
             var personCharacter = new Character(
                 "Ghrisha", true, true,
                 Race.Elf, Sex.Male, 19, 2000, 500,5000);
-            
             
         }
     }
