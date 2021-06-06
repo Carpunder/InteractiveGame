@@ -43,6 +43,10 @@ namespace Game.Classes
             else
                 caster.CharacterEvent += delegate { Console.WriteLine("Not Enough mana to cast UnfreezeSpell"); };
         }
-        
+
+        public override string ToString()
+        {
+            return "Unfreeze";
+        }
     }
 }

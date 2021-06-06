@@ -56,5 +56,10 @@ namespace Game.Classes
                 caster.CharacterEvent += delegate { Console.WriteLine("Not Enough mana " +
                                                                               "to cast Armor Spell"); };
         }
+
+        public override string ToString()
+        {
+            return "Armor";
+        }
     }
 }

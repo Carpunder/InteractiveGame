@@ -57,5 +57,10 @@ namespace Game.Classes
             else
                 caster.CharacterEvent += delegate { Console.WriteLine("Not Enough mana to cast HealSpell"); };
         }
+
+        public override string ToString()
+        {
+            return "Heal";
+        }
     }
 }

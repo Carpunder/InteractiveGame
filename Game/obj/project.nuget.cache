@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Xg4luTfscbuHoxm7zlqHw8/MRdo+c5H1q4FkSFYQXZezU066m3roWpZo+U8KxHn8G5dppIInGdisgZNMy87Pow==",
+  "dgSpecHash": "gTykQTtT8IJk9EvY5MtEdb0I/x4O2nDf7m6kiU4fp32KDhWPcu7YGWY4tvq81uGBM2mEIyiSl5aN9JpKX8HNFw==",
   "success": true,
-  "projectFilePath": "/Users/pavelprokopenko/RiderProjects/InteractiveGame/Game/Game.csproj",
+  "projectFilePath": "C:\\Users\\Flarl\\RiderProjects\\InteractiveGame\\Game\\Game.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -57,6 +57,10 @@ namespace Game.Classes
             else
                 caster.CharacterEvent += delegate { Console.WriteLine("Not Enough mana to cast AntidoteSpell"); };
         }
-        
+
+        public override string ToString()
+        {
+            return "Antidote";
+        }
     }
 }

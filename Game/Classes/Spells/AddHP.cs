@@ -71,5 +71,10 @@ namespace Game.Classes
                                                                               "to cast AddHP Spell"); };
             }
         }
+
+        public override string ToString()
+        {
+            return "AddHP";
+        }
     }
 }

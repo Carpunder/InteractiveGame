@@ -1,4 +1,6 @@
-﻿using Game.Enums;
+﻿using System;
+using System.Collections.Generic;
+using Game.Enums;
 
 namespace Game.Classes
 {
@@ -6,6 +8,7 @@ namespace Game.Classes
     {
         private uint maxMP;
         private uint currentMP;
+        public List<Spell> Abilities { get; private set; }
         
         public uint MaxMP
         {
@@ -30,6 +33,22 @@ namespace Game.Classes
             Program.id += 1;
             MaxMP = maxMp;
             CurrentMP = currentMp;
+            Abilities = new List<Spell>() { };
+        }
+        
+        public void ShowAbilities()
+        {
+            Console.WriteLine("Abilities:");
+            foreach (var VARIABLE in Abilities)
+            {
+                Console.WriteLine(VARIABLE.ToString());
+            }
+        }
+        
+        public void LearnSpell(Spell spell)
+        {
+            CharacterEvent += delegate { Console.WriteLine($"You learn {spell.ToString()}"); };
+            Abilities.Add(spell);
         }
         
         public override string ToString()

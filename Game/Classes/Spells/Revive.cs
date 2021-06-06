@@ -43,5 +43,10 @@ namespace Game.Classes
             else
                 caster.CharacterEvent += delegate { Console.WriteLine("Not Enough mana to cast ReviveSpell"); };
         }
+
+        public override string ToString()
+        {
+            return "Revive";
+        }
     }
 }

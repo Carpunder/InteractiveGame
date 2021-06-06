@@ -47,3 +47,16 @@ F:/Game/Game/obj/Debug/netcoreapp3.1/Game.genruntimeconfig.cache
 /Users/pavelprokopenko/RiderProjects/InteractiveGame/Game/obj/Debug/netcoreapp3.1/Game.dll
 /Users/pavelprokopenko/RiderProjects/InteractiveGame/Game/obj/Debug/netcoreapp3.1/Game.pdb
 /Users/pavelprokopenko/RiderProjects/InteractiveGame/Game/obj/Debug/netcoreapp3.1/Game.genruntimeconfig.cache
+C:\Users\Flarl\RiderProjects\InteractiveGame\Game\bin\Debug\netcoreapp3.1\Game.exe
+C:\Users\Flarl\RiderProjects\InteractiveGame\Game\bin\Debug\netcoreapp3.1\Game.deps.json
+C:\Users\Flarl\RiderProjects\InteractiveGame\Game\bin\Debug\netcoreapp3.1\Game.runtimeconfig.json
+C:\Users\Flarl\RiderProjects\InteractiveGame\Game\bin\Debug\netcoreapp3.1\Game.runtimeconfig.dev.json
+C:\Users\Flarl\RiderProjects\InteractiveGame\Game\bin\Debug\netcoreapp3.1\Game.dll
+C:\Users\Flarl\RiderProjects\InteractiveGame\Game\bin\Debug\netcoreapp3.1\Game.pdb
+C:\Users\Flarl\RiderProjects\InteractiveGame\Game\obj\Debug\netcoreapp3.1\Game.csprojAssemblyReference.cache
+C:\Users\Flarl\RiderProjects\InteractiveGame\Game\obj\Debug\netcoreapp3.1\Game.AssemblyInfoInputs.cache
+C:\Users\Flarl\RiderProjects\InteractiveGame\Game\obj\Debug\netcoreapp3.1\Game.AssemblyInfo.cs
+C:\Users\Flarl\RiderProjects\InteractiveGame\Game\obj\Debug\netcoreapp3.1\Game.csproj.CoreCompileInputs.cache
+C:\Users\Flarl\RiderProjects\InteractiveGame\Game\obj\Debug\netcoreapp3.1\Game.dll
+C:\Users\Flarl\RiderProjects\InteractiveGame\Game\obj\Debug\netcoreapp3.1\Game.pdb
+C:\Users\Flarl\RiderProjects\InteractiveGame\Game\obj\Debug\netcoreapp3.1\Game.genruntimeconfig.cache

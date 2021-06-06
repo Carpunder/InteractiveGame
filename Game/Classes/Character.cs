@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Game.Enums;
 
 namespace Game.Classes
@@ -16,6 +17,7 @@ namespace Game.Classes
         private uint maxHP;
         private uint currentHP;
         private uint experience;
+        public List<Artifact> Inventory { get; private set; }
 
         public uint CurrentHP
         {
@@ -98,6 +100,7 @@ namespace Game.Classes
             MaxHP = maxHp;
             CurrentHP = currentHp;
             Experience = experience;
+            Inventory = new List<Artifact>() {};
             CharacterEvent += delegate { Console.WriteLine($"Character {Name} ({Race}) created!");};
         }
         
@@ -109,6 +112,58 @@ namespace Game.Classes
                 return -1;
             return 0;
         }
+        public void ShowInventory()
+        {
+            Console.WriteLine("Inventory:");
+            foreach (var VARIABLE in Inventory)
+            {
+                Console.WriteLine(VARIABLE.ToString());
+            }
+        }
+
+        public void TakeArtifact(Artifact artifact)
+        {
+            CharacterEvent += delegate { Console.WriteLine($"You take {artifact.ToString()}"); };
+            Inventory.Add(artifact);
+        }
+
+        public void DropArtifact(Artifact artifact)
+        {
+            if (!Inventory.Contains(artifact))
+            {
+                CharacterEvent += delegate { Console.WriteLine($"You don't have {artifact.ToString()}"); };
+                return;
+            }
+            CharacterEvent += delegate { Console.WriteLine($"You drop {artifact.ToString()}"); };
+            Inventory.Remove(artifact);
+        }
+
+        public void GiveArtifact(Character target, Artifact artifact)
+        {
+            if (!Inventory.Contains(artifact))
+            {
+                CharacterEvent += delegate { Console.WriteLine($"You don't have {artifact.ToString()}"); };
+                return;
+            }
+            
+            target.TakeArtifact(artifact);
+            DropArtifact(artifact);
+            CharacterEvent += delegate { Console.WriteLine($"You Give {artifact.ToString()}"); };
+        }
+        
+        public void GiveArtifact(MagicCharacter target, Artifact artifact)
+        {
+            if (!Inventory.Contains(artifact))
+            {
+                CharacterEvent += delegate { Console.WriteLine($"You don't have {artifact.ToString()}"); };
+                return;
+            }
+            
+            target.TakeArtifact(artifact);
+            DropArtifact(artifact);
+            CharacterEvent += delegate { Console.WriteLine($"You Give {artifact.ToString()}"); };
+        }
+
         public override string ToString()
         {
             return $"Id: {Id}\n" +
