@@ -123,6 +123,11 @@ namespace Game.Classes
 
         public void TakeArtifact(Artifact artifact)
         {
+            if (Inventory.Contains(artifact))
+            {
+                CharacterEvent += delegate { Console.WriteLine($"You already have {artifact.ToString()}"); };
+                return;
+            }
             CharacterEvent += delegate { Console.WriteLine($"You take {artifact.ToString()}"); };
             Inventory.Add(artifact);
         }

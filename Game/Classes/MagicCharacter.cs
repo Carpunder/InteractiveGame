@@ -8,7 +8,7 @@ namespace Game.Classes
     {
         private uint maxMP;
         private uint currentMP;
-        public List<Spell> Abilities { get; private set; }
+        public List<Spell> Abilities { get; set; }
         
         public uint MaxMP
         {
@@ -47,10 +47,24 @@ namespace Game.Classes
         
         public void LearnSpell(Spell spell)
         {
+            if (Abilities.Contains(spell))
+            {
+                CharacterEvent += delegate { Console.WriteLine($"You already have {spell.ToString()}"); };
+                return;
+            }
             CharacterEvent += delegate { Console.WriteLine($"You learn {spell.ToString()}"); };
             Abilities.Add(spell);
         }
-        
+
+        public string ShowBase()
+        {
+            return
+                   $"Name: {Name}\n" +
+                   $"Race: {Race}\n" +
+                   $"Sex: {Sex}\n"+
+                   $"Age: {Age}\n"+
+                   $"Experience: {Experience}";
+        }
         public override string ToString()
         {
             return $"Id: {Id}\n" +

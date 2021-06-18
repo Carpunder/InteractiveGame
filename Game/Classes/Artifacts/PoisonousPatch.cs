@@ -9,30 +9,28 @@ namespace Game.Classes.Artifacts
 
         public override void Use(Character holder, Character target, uint power)
         {
-            if (target.State != State.Normal || target.State != State.Weakened || power > target.CurrentHP)
+            if (!(target.State == State.Normal || target.State == State.Weakened) || power > target.CurrentHP)
             {
                 holder.CharacterEvent += delegate { Console.WriteLine("Can't use PoisonousPatch"); };
                 return;
             }
-
-            target.State = State.Poisoned;
             target.CurrentHP -= power;
+            target.State = State.Poisoned;
             holder.CharacterEvent += delegate { Console.WriteLine("PoisonousPatch is used"); };
             target.CharacterEvent += delegate { Console.WriteLine($"PoisonousPatch is used\n" +
                                                                   $"Current State: {target.State}\n" +
                                                                   $"Current HP: {target.CurrentHP}"); };
         }
 
-        public override void Use(Character holder, MagicCharacter target, uint power)
+        public override void Use(Character holder, MagicCharacter target, uint power = 0)
         {
-            if (target.State != State.Normal || target.State != State.Weakened || power > target.CurrentHP)
+            if (!(target.State == State.Normal || target.State == State.Weakened) || power > target.CurrentHP)
             {
                 holder.CharacterEvent += delegate { Console.WriteLine("Can't use PoisonousPatch"); };
                 return;
             }
-
-            target.State = State.Poisoned;
             target.CurrentHP -= power;
+            target.State = State.Poisoned;
             holder.CharacterEvent += delegate { Console.WriteLine("PoisonousPatch is used"); };
             target.CharacterEvent += delegate { Console.WriteLine($"PoisonousPatch is used\n" +
                                                                   $"Current State: {target.State}\n" +
@@ -41,30 +39,28 @@ namespace Game.Classes.Artifacts
 
         public override void Use(MagicCharacter holder, Character target, uint power)
         {
-            if (target.State != State.Normal || target.State != State.Weakened || power > target.CurrentHP)
+            if (!(target.State == State.Normal || target.State == State.Weakened) || power > target.CurrentHP)
             {
                 holder.CharacterEvent += delegate { Console.WriteLine("Can't use PoisonousPatch"); };
                 return;
             }
-
-            target.State = State.Poisoned;
             target.CurrentHP -= power;
+            target.State = State.Poisoned;
             holder.CharacterEvent += delegate { Console.WriteLine("PoisonousPatch is used"); };
             target.CharacterEvent += delegate { Console.WriteLine($"PoisonousPatch is used\n" +
                                                                   $"Current State: {target.State}\n" +
                                                                   $"Current HP: {target.CurrentHP}"); };
         }
 
-        public override void Use(MagicCharacter holder, MagicCharacter target, uint power)
+        public override void Use(MagicCharacter holder, MagicCharacter target, uint power = 0)
         {
-            if (target.State != State.Normal || target.State != State.Weakened || power > target.CurrentHP)
+            if (!(target.State == State.Normal || target.State == State.Weakened) || power > target.CurrentHP)
             {
                 holder.CharacterEvent += delegate { Console.WriteLine("Can't use PoisonousPatch"); };
                 return;
             }
-
-            target.State = State.Poisoned;
             target.CurrentHP -= power;
+            target.State = State.Poisoned;
             holder.CharacterEvent += delegate { Console.WriteLine("PoisonousPatch is used"); };
             target.CharacterEvent += delegate { Console.WriteLine($"PoisonousPatch is used\n" +
                                                                   $"Current State: {target.State}\n" +
